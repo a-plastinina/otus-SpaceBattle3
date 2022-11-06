@@ -3,7 +3,7 @@ using SpaceBattle.Interface;
 
 namespace SpaceBattle
 {
-    public class MoveCommand
+    public class MoveCommand : ICommand
     {
         public IMovable _movableAdapter { get; }
 
