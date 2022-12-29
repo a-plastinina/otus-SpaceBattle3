@@ -1,8 +1,6 @@
-using System;
 using TechTalk.SpecFlow;
 using FluentAssertions;
 using Moq;
-using SpaceBattle;
 using SpaceBattle.Interface;
 
 namespace SpaceBattle.Spec.Tests

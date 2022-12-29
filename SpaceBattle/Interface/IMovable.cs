@@ -6,3 +6,4 @@ namespace SpaceBattle.Interface
         Vector Velocity { get; }
     }
 }
+

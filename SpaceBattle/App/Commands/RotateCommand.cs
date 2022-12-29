@@ -3,7 +3,7 @@ using SpaceBattle.Interface;
 
 namespace SpaceBattle
 {
-    public class RotateCommand
+    public class RotateCommand : ICommand
     {
         IRotable _rotable;
         public RotateCommand(IRotable rotable)
