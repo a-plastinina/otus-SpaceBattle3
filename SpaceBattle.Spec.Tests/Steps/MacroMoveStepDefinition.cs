@@ -5,7 +5,7 @@ using System;
 	using Moq;
     using FluentAssertions;
 
-	namespace MyNamespace
+	namespace SpeceBattle.Spec.Test
 	{
 		[Binding]
 		public class MacroMoveStepDefinition

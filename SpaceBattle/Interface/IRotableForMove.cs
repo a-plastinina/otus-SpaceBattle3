@@ -1,8 +1,8 @@
 namespace SpaceBattle.Interface
 {
-    public interface IRotableForMove : IMovable
+    public interface IRotableForMove : IRotable
     {
-        IRotable rotatable { get; }
+        IMovable movable { get; }
 
         void ChangeVelocity(Vector value);
     }

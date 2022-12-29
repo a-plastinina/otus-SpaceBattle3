@@ -3,23 +3,24 @@ using SpaceBattle.Interface;
 
 namespace SpaceBattle
 {
+    //Реализовать команду для модификации вектора мгновенной скорости при повороте. 
+    //Необходимо учесть, что не каждый разворачивающийся объект движется.
     public class ChangeVelocityCommand : ICommand
     {
-        readonly IRotableForMove _movable; 
+        readonly IRotableForMove _rotable; 
                 
-        public ChangeVelocityCommand(IRotableForMove rotable) => _movable = rotable;
+        public  ChangeVelocityCommand(IRotableForMove rotable) => _rotable = rotable;
 
         public void Execute()
         {
-            //Реализовать команду для модификации вектора мгновенной скорости при повороте. 
-            //Необходимо учесть, что не каждый разворачивающийся объект движется.
-            if (_movable.rotatable != null)
-                _movable.ChangeVelocity(getNewVelocity());
+             if (_rotable.movable != null)
+                _rotable.ChangeVelocity(getNewVelocity());
         }
 
         private Vector getNewVelocity()
         {
-            return _movable.Velocity + new Vector(-1*(_movable.Position.X - _movable.rotatable.AngularVelocity), -1*_movable.Position.Y);
+            // некоторое вычисление для получения новой скорости
+            return new Vector(new Random(5).Next(), new Random(5).Next());
         }
     }
 }

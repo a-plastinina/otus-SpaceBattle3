@@ -7,9 +7,9 @@ namespace SpaceBattle
         readonly ICommand[] _chainCommands = new ICommand[3];
         public MacroRotateCommand(IRotableForMove obj)
         {
-            _chainCommands[0] = new RotateCommand(obj.rotatable);
+            _chainCommands[0] = new RotateCommand(obj);
             _chainCommands[1] = new ChangeVelocityCommand(obj);
-            _chainCommands[2] = new MoveCommand(obj);
+            _chainCommands[2] = new MoveCommand(obj.movable);
         }
 
         public void Execute()
